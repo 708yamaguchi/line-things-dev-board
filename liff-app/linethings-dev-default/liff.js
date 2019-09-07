@@ -141,14 +141,14 @@ function initializeCardForDevice(device) {
     template.querySelector('.card > .card-header > .device-name').innerText = device.name;
 
     //LED Control
-    template.querySelector('.led0_value').addEventListener('change', () => {
-        onScreenLog('LED0 Value changed');
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // template.querySelector('.led0_value').addEventListener('change', () => {
+    //     onScreenLog('LED0 Value changed');
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
 
-        const led0_status = template.querySelector('.led0_value').checked;
-        onScreenLog('LED0 status : ' + led0_status);
+    //     const led0_status = template.querySelector('.led0_value').checked;
+    //     onScreenLog('LED0 status : ' + led0_status);
 
-    });
+    // });
     // template.querySelector('.led1_value').addEventListener('change', () => {
     //     onScreenLog('LED1 Value changed');
     //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
@@ -376,36 +376,36 @@ async function readCharacteristic(characteristic) {
 
 async function updateLedState(device) {
     const card = getDeviceCard(device);
-    const led0_status = !!card.querySelector('.led0_value').checked;
-    const led1_status = !!card.querySelector('.led1_value').checked;
-    const led2_status = !!card.querySelector('.led2_value').checked;
+    // const led0_status = !!card.querySelector('.led0_value').checked;
+    // const led1_status = !!card.querySelector('.led1_value').checked;
+    // const led2_status = !!card.querySelector('.led2_value').checked;
     // const led3_status = !!card.querySelector('.led3_value').checked;
     const buzzer_status = !!card.querySelector('.buzzer_value').checked;
-    const io2_status = !!card.querySelector('.io2_value').checked;
-    const io3_status = !!card.querySelector('.io3_value').checked;
-    const io4_status = !!card.querySelector('.io4_value').checked;
-    const io5_status = !!card.querySelector('.io5_value').checked;
-    const io12_status = !!card.querySelector('.io12_value').checked;
-    const io13_status = !!card.querySelector('.io13_value').checked;
-    const io14_status = !!card.querySelector('.io14_value').checked;
-    const io15_status = !!card.querySelector('.io15_value').checked;
-    const io16_status = !!card.querySelector('.io16_value').checked;
+    // const io2_status = !!card.querySelector('.io2_value').checked;
+    // const io3_status = !!card.querySelector('.io3_value').checked;
+    // const io4_status = !!card.querySelector('.io4_value').checked;
+    // const io5_status = !!card.querySelector('.io5_value').checked;
+    // const io12_status = !!card.querySelector('.io12_value').checked;
+    // const io13_status = !!card.querySelector('.io13_value').checked;
+    // const io14_status = !!card.querySelector('.io14_value').checked;
+    // const io15_status = !!card.querySelector('.io15_value').checked;
+    // const io16_status = !!card.querySelector('.io16_value').checked;
 
     let data = [0, 0];
-    data[1] = data[1] + (led0_status << 7);
-    data[1] = data[1] + (led1_status << 6);
-    data[1] = data[1] + (led2_status << 5);
+    // data[1] = data[1] + (led0_status << 7);
+    // data[1] = data[1] + (led1_status << 6);
+    // data[1] = data[1] + (led2_status << 5);
     // data[1] = data[1] + (led3_status << 4);
     data[1] = data[1] + (buzzer_status << 3);
-    data[1] = data[1] + (io2_status << 2);
-    data[1] = data[1] + (io3_status << 1);
-    data[1] = data[1] + io4_status;
-    data[0] = data[0] + (io5_status << 7);
-    data[0] = data[0] + (io12_status << 6);
-    data[0] = data[0] + (io13_status << 5);
-    data[0] = data[0] + (io14_status << 4);
-    data[0] = data[0] + (io15_status << 3);
-    data[0] = data[0] + (io16_status << 2);
+    // data[1] = data[1] + (io2_status << 2);
+    // data[1] = data[1] + (io3_status << 1);
+    // data[1] = data[1] + io4_status;
+    // data[0] = data[0] + (io5_status << 7);
+    // data[0] = data[0] + (io12_status << 6);
+    // data[0] = data[0] + (io13_status << 5);
+    // data[0] = data[0] + (io14_status << 4);
+    // data[0] = data[0] + (io15_status << 3);
+    // data[0] = data[0] + (io16_status << 2);
 
     const header = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     const command = header.concat(data);
