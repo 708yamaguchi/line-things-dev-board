@@ -157,10 +157,10 @@ function initializeCardForDevice(device) {
         onScreenLog('LED2 Value changed');
         updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
     });
-    template.querySelector('.led3_value').addEventListener('change', () => {
-        onScreenLog('LED3 Value changed');
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
+    // template.querySelector('.led3_value').addEventListener('change', () => {
+    //     onScreenLog('LED3 Value changed');
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
     template.querySelector('.buzzer_value').addEventListener('change', () => {
         onScreenLog('Buzzer Value changed');
         updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
