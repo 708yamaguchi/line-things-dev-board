@@ -147,7 +147,6 @@ function initializeCardForDevice(device) {
 
     //     const led0_status = template.querySelector('.led0_value').checked;
     //     onScreenLog('LED0 status : ' + led0_status);
-
     // });
     // template.querySelector('.led1_value').addEventListener('change', () => {
     //     onScreenLog('LED1 Value changed');
