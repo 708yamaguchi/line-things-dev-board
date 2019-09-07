@@ -149,14 +149,14 @@ function initializeCardForDevice(device) {
         onScreenLog('LED0 status : ' + led0_status);
 
     });
-    template.querySelector('.led1_value').addEventListener('change', () => {
-        onScreenLog('LED1 Value changed');
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.led2_value').addEventListener('change', () => {
-        onScreenLog('LED2 Value changed');
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
+    // template.querySelector('.led1_value').addEventListener('change', () => {
+    //     onScreenLog('LED1 Value changed');
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.led2_value').addEventListener('change', () => {
+    //     onScreenLog('LED2 Value changed');
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
     // template.querySelector('.led3_value').addEventListener('change', () => {
     //     onScreenLog('LED3 Value changed');
     //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
@@ -165,33 +165,33 @@ function initializeCardForDevice(device) {
         onScreenLog('Buzzer Value changed');
         updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
     });
-    template.querySelector('.io2_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io3_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io4_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io5_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io12_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io13_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io14_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io15_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
-    template.querySelector('.io16_value').addEventListener('change', () => {
-        updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
-    });
+    // template.querySelector('.io2_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io3_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io4_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io5_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io12_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io13_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io14_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io15_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
+    // template.querySelector('.io16_value').addEventListener('change', () => {
+    //     updateLedState(device).catch(e => onScreenLog(`ERROR on updateLedState(): ${e}\n${e.stack}`));
+    // });
     // Device disconnect button
     template.querySelector('.device-disconnect').addEventListener('click', () => {
         onScreenLog('Clicked disconnect button');
