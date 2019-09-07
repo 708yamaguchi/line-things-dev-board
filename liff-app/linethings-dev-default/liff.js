@@ -379,7 +379,7 @@ async function updateLedState(device) {
     const led0_status = !!card.querySelector('.led0_value').checked;
     const led1_status = !!card.querySelector('.led1_value').checked;
     const led2_status = !!card.querySelector('.led2_value').checked;
-    const led3_status = !!card.querySelector('.led3_value').checked;
+    // const led3_status = !!card.querySelector('.led3_value').checked;
     const buzzer_status = !!card.querySelector('.buzzer_value').checked;
     const io2_status = !!card.querySelector('.io2_value').checked;
     const io3_status = !!card.querySelector('.io3_value').checked;
@@ -395,7 +395,7 @@ async function updateLedState(device) {
     data[1] = data[1] + (led0_status << 7);
     data[1] = data[1] + (led1_status << 6);
     data[1] = data[1] + (led2_status << 5);
-    data[1] = data[1] + (led3_status << 4);
+    // data[1] = data[1] + (led3_status << 4);
     data[1] = data[1] + (buzzer_status << 3);
     data[1] = data[1] + (io2_status << 2);
     data[1] = data[1] + (io3_status << 1);
